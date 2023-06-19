@@ -1,0 +1,123 @@
+﻿/* Basic styling for the entire body of the website */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+/* The container holding the left and right sides of the website */
+#container {
+    display: flex;
+}
+
+/* Styling for the left side of the website */
+#left-side {
+    padding: 20px;
+}
+
+/* Styling for the right side of the website */
+#right-side {
+    overflow-y: auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Styling for text and file inputs */
+input[type="text"], input[type="file"] {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 300px;
+}
+
+/* Styling for the buttons */
+button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+/* Change color of button when hovered over */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for the binder where thumbnails will be displayed */
+#binder {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 10px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+/* Styling for the image thumbnails */
+.thumbnail {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    padding: 5px;
+    transition: transform .2s;
+}
+
+/* Increase size of thumbnail when hovered over */
+.thumbnail:hover {
+    transform: scale(1.05);
+}
+
+/* Styling for the canvas element */
+canvas {
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+/* Styling for the specific canvas used in this website */
+#imageCanvas {
+    width: 100%;
+}
+
+/* A class to change the background color when an item is being sorted */
+.blue-background-class {
+    background-color: #668cff;
+}
+
+/* Changes to the body when dark mode is enabled */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+}
+
+/* Changes to input fields when dark mode is enabled */
+body.dark-mode input[type="text"], body.dark-mode input[type="file"] {
+    background-color: #333;
+    color: #f5f5f5;
+    border-color: #444;
+}
+
+/* Change the background color of the binder when dark mode is enabled */
+body.dark-mode #binder {
+    background-color: #333;
+}
+
+/* Changes to buttons when dark mode is enabled */
+body.dark-mode button {
+    background-color: #444;
+    color: #f5f5f5;
+}
+
+/* Change color of button when hovered over and dark mode is enabled */
+body.dark-mode button:hover {
+    background-color: #666;
+}

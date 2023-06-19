@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Adding in the relevant CSS and JS files -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.3.1/fabric.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <!-- Creating a container to hold the two main sections of the website -->
+    <div id="container">
+        <!-- Creating the left side of the website where the canvas will be displayed -->
+        <div id="left-side">
+            <!-- Adding in a canvas with a unique ID and specific width/height -->
+            <canvas id="imageCanvas" width="750" height="1050"></canvas><br>
+            <!-- Adding in a place to display the image size -->
+            <div id="imageSize">Image size: N/A</div>
+        </div>
+
+        <!-- Creating the right side of the website where the user can interact -->
+        <div id="right-side">
+            <!-- Creating an area to hold the various inputs -->
+            <div id="inputs">
+                <!-- Creating a place for the user to upload an image -->
+                <input type="file" id="imageLoader" name="imageLoader"/><br>
+                <!-- Creating a place for the user to input a name -->
+                <input type="text" id="name" name="name"><br>
+                <!-- Creating a place for the user to input tags -->
+                <input type="text" id="tags" name="tags"><br>
+                <!-- Creating a download button -->
+                <button id="download">Download</button>
+                <!-- Creating a dark mode button -->
+                <button id="darkMode">Dark Mode</button><br>
+            </div>
+
+            <!-- Creating an area to display thumbnails of the loaded images -->
+            <div id="binder"></div>
+            <!-- Creating an input to allow multiple files to be loaded at once -->
+            <input type="file" id="loadCards" multiple />
+            <button id="exportBinder">Export Binder</button>
+            <canvas id="collageCanvas" style="display:none;"></canvas>
+        </div>
+    </div>
+    <!-- Adding in the custom JS file -->
+    <script src="script.js"></script>
+</body>
+</html>
